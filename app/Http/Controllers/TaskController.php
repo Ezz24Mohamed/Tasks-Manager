@@ -27,7 +27,7 @@ class TaskController extends Controller
             'user_id' => Auth::id(),
         ]);
 
-        return response()->json($task, 201);
+        return response()->json(['task'=>$task,'message'=>'Task Added Successfully'], 201);
     }
 
     // Update a task
